@@ -1,0 +1,2 @@
+/* El respaldo en memoria permite seguir usando la página si el navegador bloquea el almacenamiento. */
+Adviento.store=(()=>{const pref='adviento_xochitl_leo_',mem={};return{get(k,f){try{const v=localStorage.getItem(pref+k);return v===null?(k in mem?mem[k]:f):JSON.parse(v)}catch(e){return k in mem?mem[k]:f}},set(k,v){mem[k]=v;try{localStorage.setItem(pref+k,JSON.stringify(v))}catch(e){}},reset(){['abiertas','ultima_apertura','modo','musica','arbol','deseos','abrazos','color','minutos'].forEach(k=>{delete mem[k];try{localStorage.removeItem(pref+k)}catch(e){}})}}})();

@@ -1,0 +1,1 @@
+@media print{body{background:white;color:black}body> :not(#print-content){display:none!important}#print-content{display:block!important}#print-content article{break-inside:avoid;border-bottom:1px solid #777;padding:10px 0}#print-content h1{font-size:24pt}#print-content p{font-size:12pt}}
